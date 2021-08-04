@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.myproject.utility.ListenerClass"/>
+  </listeners>
+  <test thread-count="5" name="Test_All(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.myproject.testcases.HomePageTest">
+        <methods>
+          <include name="verifyWishListTest" invocation-numbers="1"/>
+          <include name="loadConfig"/>
+          <include name="verifyOrderHistoryTest" invocation-numbers="1"/>
+          <include name="setup"/>
+          <include name="afterSuite"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.myproject.testcases.HomePageTest -->
+      <class name="com.myproject.testcases.CompleteTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="endtoEndTest" invocation-numbers="0"/>
+          <include name="afterSuite"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.myproject.testcases.CompleteTest -->
+      <class name="com.myproject.testcases.RegisterPageTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="createAccountTest" invocation-numbers="0 1 2"/>
+          <include name="createaccountpageTest" invocation-numbers="0"/>
+          <include name="afterSuite"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.myproject.testcases.RegisterPageTest -->
+      <class name="com.myproject.testcases.LoginPageTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="LoginTest" invocation-numbers="1"/>
+          <include name="afterSuite"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.myproject.testcases.LoginPageTest -->
+    </classes>
+  </test> <!-- Test_All(failed) -->
+</suite> <!-- Failed suite [Suite] -->
